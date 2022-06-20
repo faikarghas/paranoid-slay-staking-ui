@@ -37,19 +37,7 @@ const Header = ({ farmId, setFarmId }: Props) => {
             <Flex as="a" sx={{ alignItems: "center", flexDirection: "column" }}>
               <Flex sx={{ alignItems: "center" }}>
                 <Text as="h1" variant="headingSpecial" ml=".4rem">
-                  GEM
-                </Text>
-
-                <img
-                  sx={{
-                    maxHeight: "4.8rem",
-                  }}
-                  src="/images/gemtransparent.gif"
-                  alt="Gemworks"
-                />
-
-                <Text as="h1" variant="headingSpecial" ml=".4rem">
-                  FARM
+                  PARANOID SLAY
                 </Text>
               </Flex>
               {/* <Text
@@ -151,7 +139,7 @@ const Header = ({ farmId, setFarmId }: Props) => {
               }}
               onClick={() => setIsChangingFarmId((prev) => !prev)}
             >
-              (Change Farm ID)
+              (Stake ID)
             </a>
 
             <WalletManager />

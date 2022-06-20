@@ -38,6 +38,9 @@ const StakePage = () => {
 
   const { publicKey } = useWallet()
 
+  console.log(availableA);
+  
+
   return (
     <Container>
       <Header farmId={farmId} setFarmId={setFarmId} />
@@ -70,7 +73,7 @@ const StakePage = () => {
           //     margin: "3.2rem 0"
           //   }}
           // />
-          <Text mt="1.6rem">Farm ID is not configured.</Text>
+          <Text mt="1.6rem">Stake ID is not configured.</Text>
         ) : /** If there is farmerAccount variable, but no address, it means account isn't initialized */
         farmerAccount && !farmerAccount?.identity ? (
           <Button
@@ -100,12 +103,6 @@ const StakePage = () => {
                       justifyContent: "center",
                     }}
                   >
-                    <img
-                      sx={{
-                        maxHeight: "2.4rem",
-                      }}
-                      src="images/gemtransparent.gif"
-                    />
                     <Text>
                       NFTs staked:&nbsp;
                       {farmerAccount?.gemsStaked.toNumber()}
@@ -177,7 +174,10 @@ const StakePage = () => {
                       src="images/icon-list-item.png"
                     />
                     {availableA ? (
+                      <div>
+                      <b>{availableA} || </b>
                       <b>{(availableA / 1000000000).toFixed(2)}</b>
+                      </div>
                     ) : (
                       0
                     )}
